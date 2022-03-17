@@ -1,20 +1,21 @@
-# Turborepo starter
+# Single-Spa Vite & Turborepo starter
 
-This is an official Yarn v1 starter turborepo.
+This is a barebones starter for a monorepo of single-spas using turborepo to manage taskrunning and monorepo management, with Vite implemented to run dev and build workflows.
 
 ## What's inside?
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It is originally bbased on the Turborepo starter package available [here](https://github.com/vercel/turborepo/tree/main/examples/basic) It includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `react-app-1`: a react application wrapped as a single-spa app
+- `react-app-2`: a duplicate react application wrapped as a single-spa app
+- `vue-app-1`: a vue application wrapped as a single-spa-app
+- `root-config`: a single-spa root-config for rendering and testing single-spa's in local development. Based on: https://github.com/joeldenning/vite-single-spa-root-config
 - `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/). With the exception of the root-config. This is pure JS due to currently unresolved issues rendering vite es6 modules in a 100% typescript environment
 
 ### Utilities
 
